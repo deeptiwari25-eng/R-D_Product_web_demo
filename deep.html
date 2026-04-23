@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuildEase PRD | Corporate Research</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        primary: '#FF6B35',
+                        primaryHover: '#E85A2C',
+                        dark: '#1E293B',
+                        body: '#334155',
+                        bgLight: '#FAFAFA'
+                    },
+                    boxShadow: {
+                        'card': '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)',
+                        'card-hover': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FAFAFA;
+            color: #334155;
+            scroll-behavior: smooth;
+        }
+
+        .hero-pattern {
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.05) 0%, rgba(30, 41, 59, 0.02) 100%);
+            backdrop-filter: blur(10px);
+        }
+
+        .card {
+            background: #FFFFFF;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            border-color: rgba(255, 107, 53, 0.2);
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #1E293B, #FF6B35);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(5px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-primary selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-dark tracking-tight">
+                <span class="text-primary">Build</span>Ease <span class="text-sm font-medium text-gray-400">PRD</span>
+            </div>
+            <div class="hidden lg:flex gap-6 text-sm font-medium text-body">
+                <a href="corporate.html" class="hover:text-primary transition">Back to Corporate</a>
+                <a href="#problem" class="hover:text-primary transition">Problem</a>
+                <a href="#modules" class="hover:text-primary transition">Modules</a>
+                <a href="#flow" class="hover:text-primary transition">Flow</a>
+                <a href="#tech" class="hover:text-primary transition">Tech & AI</a>
+                <a href="#roadmap" class="hover:text-primary transition">Roadmap</a>
+            </div>
+            <a href="#download"
+                class="bg-primary text-white px-5 py-2 rounded-lg font-medium hover:bg-primaryHover transition">Download
+                PRD</a>
+        </div>
+    </nav>
+
+    <!-- Section 1: Hero -->
+    <section class="pt-32 pb-20 hero-pattern min-h-[80vh] flex items-center">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="inline-block px-4 py-1.5 rounded-full bg-white border border-gray-200 text-sm font-medium text-primary mb-6"
+                data-aos="fade-down">
+                R&D Research Report · Q2 2026
+            </div>
+            <h1 class="text-5xl md:text-7xl font-extrabold text-dark mb-6 tracking-tight leading-tight"
+                data-aos="fade-up" data-aos-delay="100">
+                One Platform.<br> <span class="gradient-text">Everything Construction.</span>
+            </h1>
+            <p class="text-xl text-body max-w-3xl mx-auto mb-10 leading-relaxed font-light" data-aos="fade-up"
+                data-aos-delay="200">
+                Tender Marketplace + Procurement + Service Directory + Project Tracking + Reviews — all in one place.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16" data-aos="fade-up"
+                data-aos-delay="300">
+                <a href="#problem"
+                    class="bg-dark text-white px-8 py-3.5 rounded-xl font-semibold hover:bg-black transition shadow-lg w-full sm:w-auto">Explore
+                    Solution</a>
+                <button onclick="alert('Video placeholder: Opens a modal with prototype walkthrough.')"
+                    class="bg-white text-dark border border-gray-200 px-8 py-3.5 rounded-xl font-semibold hover:border-primary hover:text-primary transition shadow-sm w-full sm:w-auto">
+                    <i class="fas fa-play-circle mr-2 text-primary"></i> Watch Overview
+                </button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto" data-aos="fade-up"
+                data-aos-delay="400">
+                <div class="bg-white/60 p-4 rounded-xl border border-white/40 shadow-sm backdrop-blur-md">
+                    <div class="text-3xl font-bold text-dark">5+</div>
+                    <div class="text-sm font-medium text-body">User Types Supported</div>
+                </div>
+                <div class="bg-white/60 p-4 rounded-xl border border-white/40 shadow-sm backdrop-blur-md">
+                    <div class="text-3xl font-bold text-dark">11</div>
+                    <div class="text-sm font-medium text-body">Core Problems Solved</div>
+                </div>
+                <div class="bg-white/60 p-4 rounded-xl border border-white/40 shadow-sm backdrop-blur-md">
+                    <div class="text-3xl font-bold text-dark">4</div>
+                    <div class="text-sm font-medium text-body">Phase Delivery Roadmap</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Problem Statement -->
+    <section id="problem" class="py-20 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-dark mb-8 text-center" data-aos="fade-up">The Reality of
+                Construction</h2>
+
+            <!-- Video Presentation -->
+            <div class="max-w-4xl mx-auto mb-16 rounded-2xl overflow-hidden shadow-2xl border-4 border-white"
+                data-aos="zoom-in" data-aos-delay="100">
+                <video class="w-full h-auto object-cover bg-gray-100" autoplay loop muted playsinline controls>
+                    <source
+                        src="Create_a_10-second_split-screen_animated_video._Left_side_(Problem)__A_tired_construction_site_manag_seed790124256.mp4"
+                        type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="bg-dark text-white p-4 text-center">
+                    <p class="font-medium text-sm tracking-wide uppercase text-gray-300 mb-1">Visual Comparison</p>
+                    <p class="font-bold text-lg">Traditional Chaos vs The BuildEase Solution</p>
+                </div>
+            </div>
+
+            <h2 class="text-3xl md:text-4xl font-bold text-dark mb-12 text-center" data-aos="fade-up">Today vs With
+                BuildEase</h2>
+            <div class="card overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-gray-50 border-b border-gray-100">
+                            <th class="p-5 font-semibold text-dark w-1/3">Activity</th>
+                            <th class="p-5 font-semibold text-gray-500 w-1/3">The Current Reality</th>
+                            <th class="p-5 font-semibold text-primary w-1/3 bg-orange-50/30">BuildEase Solution</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-100">
+                        <tr>
+                            <td class="p-5 font-medium text-dark">Finding Contractors</td>
+                            <td class="p-5 text-gray-500 line-through decoration-red-300">Word of mouth, no verification
+                            </td>
+                            <td class="p-5 font-medium text-green-600 bg-orange-50/30"><i
+                                    class="fas fa-check text-green-500 mr-2"></i> Verified Tender Marketplace</td>
+                        </tr>
+                        <tr>
+                            <td class="p-5 font-medium text-dark">Material Buying</td>
+                            <td class="p-5 text-gray-500 line-through decoration-red-300">Hidden margins, fragmented
+                                calling</td>
+                            <td class="p-5 font-medium text-green-600 bg-orange-50/30"><i
+                                    class="fas fa-check text-green-500 mr-2"></i> Transparent Procurement Hub</td>
+                        </tr>
+                        <tr>
+                            <td class="p-5 font-medium text-dark">Service Providers</td>
+                            <td class="p-5 text-gray-500 line-through decoration-red-300">Hard to find available
+                                machines/architects</td>
+                            <td class="p-5 font-medium text-green-600 bg-orange-50/30"><i
+                                    class="fas fa-check text-green-500 mr-2"></i> Instant Service Directory</td>
+                        </tr>
+                        <tr>
+                            <td class="p-5 font-medium text-dark">Project Tracking</td>
+                            <td class="p-5 text-gray-500 line-through decoration-red-300">WhatsApp pictures, no formal
+                                logs</td>
+                            <td class="p-5 font-medium text-green-600 bg-orange-50/30"><i
+                                    class="fas fa-check text-green-500 mr-2"></i> Real-time Dashboard & AI tracking</td>
+                        </tr>
+                        <tr>
+                            <td class="p-5 font-medium text-dark">Payment Management</td>
+                            <td class="p-5 text-gray-500 line-through decoration-red-300">Disputes, trust issues,
+                                delayed milestones</td>
+                            <td class="p-5 font-medium text-green-600 bg-orange-50/30"><i
+                                    class="fas fa-check text-green-500 mr-2"></i> Escrow-backed Milestone Payments</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Solution Overview (5 Modules) & Section 6: Features in Detail -->
+    <section id="modules" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4 text-center" data-aos="fade-up">Platform
+                Architecture</h2>
+            <p class="text-center text-body mb-12 max-w-2xl mx-auto" data-aos="fade-up">5 interconnected modules working
+                in harmony to digitize the entire construction lifecycle.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-12">
+                <!-- Module Cards -->
+                <div class="card p-6 cursor-pointer border-t-4 border-t-blue-500" onclick="showFeature('mod1')"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="w-10 h-10 rounded-full bg-blue-100 text-blue-500 flex items-center justify-center font-bold mb-4">
+                        1</div>
+                    <i class="fas fa-file-contract text-2xl text-blue-500 mb-3"></i>
+                    <h3 class="font-bold text-dark mb-2">Tender Market</h3>
+                    <p class="text-sm text-body">Post jobs, receive and compare bids.</p>
+                </div>
+                <div class="card p-6 cursor-pointer border-t-4 border-t-green-500" onclick="showFeature('mod2')"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="w-10 h-10 rounded-full bg-green-100 text-green-500 flex items-center justify-center font-bold mb-4">
+                        2</div>
+                    <i class="fas fa-box-open text-2xl text-green-500 mb-3"></i>
+                    <h3 class="font-bold text-dark mb-2">Procurement</h3>
+                    <p class="text-sm text-body">Order cement, steel, sand instantly.</p>
+                </div>
+                <div class="card p-6 cursor-pointer border-t-4 border-t-purple-500" onclick="showFeature('mod3')"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div
+                        class="w-10 h-10 rounded-full bg-purple-100 text-purple-500 flex items-center justify-center font-bold mb-4">
+                        3</div>
+                    <i class="fas fa-network-wired text-2xl text-purple-500 mb-3"></i>
+                    <h3 class="font-bold text-dark mb-2">Service Directory</h3>
+                    <p class="text-sm text-body">Book architects and heavy machinery.</p>
+                </div>
+                <div class="card p-6 cursor-pointer border-t-4 border-t-orange-500" onclick="showFeature('mod4')"
+                    data-aos="fade-up" data-aos-delay="400">
+                    <div
+                        class="w-10 h-10 rounded-full bg-orange-100 text-orange-500 flex items-center justify-center font-bold mb-4">
+                        4</div>
+                    <i class="fas fa-tasks text-2xl text-orange-500 mb-3"></i>
+                    <h3 class="font-bold text-dark mb-2">Project Tracking</h3>
+                    <p class="text-sm text-body">Daily logs, Gantt charts, and milestones.</p>
+                </div>
+                <div class="card p-6 cursor-pointer border-t-4 border-t-yellow-500" onclick="showFeature('mod5')"
+                    data-aos="fade-up" data-aos-delay="500">
+                    <div
+                        class="w-10 h-10 rounded-full bg-yellow-100 text-yellow-500 flex items-center justify-center font-bold mb-4">
+                        5</div>
+                    <i class="fas fa-star text-2xl text-yellow-500 mb-3"></i>
+                    <h3 class="font-bold text-dark mb-2">Reviews & Ratings</h3>
+                    <p class="text-sm text-body">Trust scores based on actual verified work.</p>
+                </div>
+            </div>
+
+            <!-- Features Detail (Tabs) -->
+            <div class="card p-8 bg-white border border-gray-100" data-aos="fade-up">
+                <div id="mod1" class="tab-content active">
+                    <h3 class="text-2xl font-bold mb-4 text-blue-600"><i class="fas fa-file-contract mr-2"></i> Tender
+                        Marketplace Features</h3>
+                    <ul class="space-y-3 font-medium text-body">
+                        <li><i class="fas fa-check-circle text-blue-500 mr-2"></i> Smart Project Posting wizard with
+                            templates</li>
+                        <li><i class="fas fa-check-circle text-blue-500 mr-2"></i> Automated Bid Comparison matrix</li>
+                        <li><i class="fas fa-check-circle text-blue-500 mr-2"></i> Digital Contract Generation & E-Sign
+                        </li>
+                        <li><i class="fas fa-check-circle text-blue-500 mr-2"></i> Milestone-based Escrow Payment setup
+                        </li>
+                    </ul>
+                </div>
+                <div id="mod2" class="tab-content">
+                    <h3 class="text-2xl font-bold mb-4 text-green-600"><i class="fas fa-box-open mr-2"></i> Procurement
+                        Features</h3>
+                    <ul class="space-y-3 font-medium text-body">
+                        <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Live catalog of local building
+                            materials</li>
+                        <li><i class="fas fa-check-circle text-green-500 mr-2"></i> AI Price trend predictions & alerts
+                        </li>
+                        <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Bulk ordering RFQ (Request For
+                            Quotation) system</li>
+                        <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Live delivery tracking via GPS</li>
+                    </ul>
+                </div>
+                <div id="mod3" class="tab-content">
+                    <h3 class="text-2xl font-bold mb-4 text-purple-600"><i class="fas fa-network-wired mr-2"></i>
+                        Service Directory Features</h3>
+                    <ul class="space-y-3 font-medium text-body">
+                        <li><i class="fas fa-check-circle text-purple-500 mr-2"></i> Calendar-based booking for JCBs,
+                            Cranes, etc.</li>
+                        <li><i class="fas fa-check-circle text-purple-500 mr-2"></i> Verified portfolio galleries for
+                            Architects & Engineers</li>
+                        <li><i class="fas fa-check-circle text-purple-500 mr-2"></i> Hourly / Daily rating engine</li>
+                    </ul>
+                </div>
+                <div id="mod4" class="tab-content">
+                    <h3 class="text-2xl font-bold mb-4 text-orange-600"><i class="fas fa-tasks mr-2"></i> Project
+                        Tracking Features</h3>
+                    <ul class="space-y-3 font-medium text-body">
+                        <li><i class="fas fa-check-circle text-orange-500 mr-2"></i> Kanban / Gantt chart scheduling
+                        </li>
+                        <li><i class="fas fa-check-circle text-orange-500 mr-2"></i> Daily Site Report (DPR) with photo
+                            attachments</li>
+                        <li><i class="fas fa-check-circle text-orange-500 mr-2"></i> Worker attendance log (Geofenced)
+                        </li>
+                        <li><i class="fas fa-check-circle text-orange-500 mr-2"></i> Automated budget vs sprint
+                            calculations</li>
+                    </ul>
+                </div>
+                <div id="mod5" class="tab-content">
+                    <h3 class="text-2xl font-bold mb-4 text-yellow-600"><i class="fas fa-star mr-2"></i> Reviews &
+                        Ratings Features</h3>
+                    <ul class="space-y-3 font-medium text-body">
+                        <li><i class="fas fa-check-circle text-yellow-500 mr-2"></i> Post-project mandated reviews</li>
+                        <li><i class="fas fa-check-circle text-yellow-500 mr-2"></i> Dispute resolution logging</li>
+                        <li><i class="fas fa-check-circle text-yellow-500 mr-2"></i> Quality, Timeliness, and Behavior
+                            rating metrics</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: User Personas -->
+    <section class="py-20 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-dark mb-12 text-center" data-aos="fade-up">The Ecosystem Players</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+                <!-- Persona 1 -->
+                <div class="card p-6" data-aos="fade-up">
+                    <div class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-xl mb-4">🏗️
+                    </div>
+                    <h4 class="font-bold text-dark mb-1">The Builder</h4>
+                    <p class="text-xs font-semibold text-primary mb-3">Project Owner</p>
+                    <p class="text-sm text-body mb-2"><strong>Action:</strong> Posts jobs & funds the project.</p>
+                    <p class="text-sm text-body"><strong>Why Join:</strong> Transparency, cost control, finding verified
+                        talent without hassle.</p>
+                </div>
+                <!-- Persona 2 -->
+                <div class="card p-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-xl mb-4">👷
+                    </div>
+                    <h4 class="font-bold text-dark mb-1">Contractor</h4>
+                    <p class="text-xs font-semibold text-primary mb-3">Execution Master</p>
+                    <p class="text-sm text-body mb-2"><strong>Action:</strong> Bids on tenders & manages labor.</p>
+                    <p class="text-sm text-body"><strong>Why Join:</strong> Steady pipeline of leads and guaranteed
+                        on-time escrow payments.</p>
+                </div>
+                <!-- Persona 3 -->
+                <div class="card p-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-xl mb-4">🧱
+                    </div>
+                    <h4 class="font-bold text-dark mb-1">Supplier</h4>
+                    <p class="text-xs font-semibold text-primary mb-3">Material Vendor</p>
+                    <p class="text-sm text-body mb-2"><strong>Action:</strong> Fulfills material orders.</p>
+                    <p class="text-sm text-body"><strong>Why Join:</strong> Bulk orders directly from sites without
+                        middlemen taking a cut.</p>
+                </div>
+                <!-- Persona 4 -->
+                <div class="card p-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-xl mb-4">📐
+                    </div>
+                    <h4 class="font-bold text-dark mb-1">Service Provider</h4>
+                    <p class="text-xs font-semibold text-primary mb-3">Architect/Machinery</p>
+                    <p class="text-sm text-body mb-2"><strong>Action:</strong> Rents out time/equipment.</p>
+                    <p class="text-sm text-body"><strong>Why Join:</strong> Maximize utilization of heavy machinery and
+                        consulting time.</p>
+                </div>
+                <!-- Persona 5 -->
+                <div class="card p-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-xl mb-4">🛠️
+                    </div>
+                    <h4 class="font-bold text-dark mb-1">Labour</h4>
+                    <p class="text-xs font-semibold text-primary mb-3">Ground Worker</p>
+                    <p class="text-sm text-body mb-2"><strong>Action:</strong> Performs daily tasks.</p>
+                    <p class="text-sm text-body"><strong>Why Join:</strong> Verified attendance, skill building, and
+                        wage protection.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: User Flow -->
+    <section id="flow" class="py-20 bg-dark text-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center" data-aos="fade-up">Standardized User Flows</h2>
+
+            <div class="space-y-12 relative">
+                <!-- Flow 1 -->
+                <div class="bg-gray-800/50 p-6 rounded-2xl border border-gray-700" data-aos="fade-right">
+                    <h4 class="font-bold text-primary mb-6 uppercase tracking-wider text-sm">Tender / Contracting Flow
+                    </h4>
+                    <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-sm font-medium">
+                        <div class="flex flex-col items-center">
+                            <div class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center mb-2"><i
+                                    class="fas fa-plus"></i></div>Post Project
+                        </div>
+                        <i class="fas fa-arrow-right text-gray-500 hidden md:block"></i><i
+                            class="fas fa-arrow-down text-gray-500 md:hidden"></i>
+                        <div class="flex flex-col items-center">
+                            <div class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center mb-2"><i
+                                    class="fas fa-users"></i></div>Receive Bids
+                        </div>
+                        <i class="fas fa-arrow-right text-gray-500 hidden md:block"></i><i
+                            class="fas fa-arrow-down text-gray-500 md:hidden"></i>
+                        <div class="flex flex-col items-center">
+                            <div class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center mb-2"><i
+                                    class="fas fa-balance-scale"></i></div>Compare
+                        </div>
+                        <i class="fas fa-arrow-right text-gray-500 hidden md:block"></i><i
+                            class="fas fa-arrow-down text-gray-500 md:hidden"></i>
+                        <div class="flex flex-col items-center">
+                            <div class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center mb-2"><i
+                                    class="fas fa-handshake"></i></div>Select & Fund Escrow
+                        </div>
+                        <i class="fas fa-arrow-right text-gray-500 hidden md:block"></i><i
+                            class="fas fa-arrow-down text-gray-500 md:hidden"></i>
+                        <div class="flex flex-col items-center">
+                            <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center mb-2"><i
+                                    class="fas fa-file-signature text-white"></i></div>Digital Contract
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Flow 2 -->
+                <div class="bg-gray-800/50 p-6 rounded-2xl border border-gray-700" data-aos="fade-left">
+                    <h4 class="font-bold text-green-400 mb-6 uppercase tracking-wider text-sm">Material Procurement Flow
+                    </h4>
+                    <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-sm font-medium">
+                        <div class="flex flex-col items-center">
+                            <div class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center mb-2"><i
+                                    class="fas fa-search"></i></div>Search Material
+                        </div>
+                        <i class="fas fa-arrow-right text-gray-500 hidden md:block"></i><i
+                            class="fas fa-arrow-down text-gray-500 md:hidden"></i>
+                        <div class="flex flex-col items-center">
+                            <div class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center mb-2"><i
+                                    class="fas fa-list-ol"></i></div>Compare Local Rates
+                        </div>
+                        <i class="fas fa-arrow-right text-gray-500 hidden md:block"></i><i
+                            class="fas fa-arrow-down text-gray-500 md:hidden"></i>
+                        <div class="flex flex-col items-center">
+                            <div class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center mb-2"><i
+                                    class="fas fa-shopping-cart"></i></div>Place Order
+                        </div>
+                        <i class="fas fa-arrow-right text-gray-500 hidden md:block"></i><i
+                            class="fas fa-arrow-down text-gray-500 md:hidden"></i>
+                        <div class="flex flex-col items-center">
+                            <div class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center mb-2"><i
+                                    class="fas fa-map-marker-alt"></i></div>Live Tracking
+                        </div>
+                        <i class="fas fa-arrow-right text-gray-500 hidden md:block"></i><i
+                            class="fas fa-arrow-down text-gray-500 md:hidden"></i>
+                        <div class="flex flex-col items-center">
+                            <div class="w-12 h-12 rounded-full bg-green-500 flex items-center justify-center mb-2"><i
+                                    class="fas fa-box text-white"></i></div>Delivery & Verify
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Tech Stack -->
+    <section id="tech" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-dark mb-4 text-center" data-aos="fade-up">Production Tech Stack</h2>
+            <p class="text-center text-body mb-12 max-w-2xl mx-auto" data-aos="fade-up">Modern, scalable,
+                serverless-capable architecture designed for high availability.</p>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Tech items -->
+                <div class="card p-6 text-center" data-aos="zoom-in" data-aos-delay="50">
+                    <i class="fab fa-react text-4xl text-blue-400 mb-3"></i>
+                    <h4 class="font-bold text-dark">React.js</h4>
+                    <p class="text-xs text-body mt-1">Web Dashboard UI</p>
+                </div>
+                <div class="card p-6 text-center" data-aos="zoom-in" data-aos-delay="100">
+                    <i class="fab fa-node-js text-4xl text-green-500 mb-3"></i>
+                    <h4 class="font-bold text-dark">Node.js</h4>
+                    <p class="text-xs text-body mt-1">Scalable Backend API</p>
+                </div>
+                <div class="card p-6 text-center" data-aos="zoom-in" data-aos-delay="150">
+                    <i class="fas fa-database text-4xl text-blue-600 mb-3"></i>
+                    <h4 class="font-bold text-dark">PostgreSQL</h4>
+                    <p class="text-xs text-body mt-1">Relational Database</p>
+                </div>
+                <div class="card p-6 text-center" data-aos="zoom-in" data-aos-delay="200">
+                    <i class="fas fa-fire text-4xl text-yellow-500 mb-3"></i>
+                    <h4 class="font-bold text-dark">Firebase Auth</h4>
+                    <p class="text-xs text-body mt-1">Phone OTP & Security</p>
+                </div>
+                <div class="card p-6 text-center" data-aos="zoom-in" data-aos-delay="250">
+                    <i class="fab fa-aws text-4xl text-orange-400 mb-3"></i>
+                    <h4 class="font-bold text-dark">AWS S3 & EC2</h4>
+                    <p class="text-xs text-body mt-1">Hosting & Media Storage</p>
+                </div>
+                <div class="card p-6 text-center" data-aos="zoom-in" data-aos-delay="300">
+                    <i class="fab fa-react text-4xl text-blue-500 mb-3"></i>
+                    <h4 class="font-bold text-dark">React Native</h4>
+                    <p class="text-xs text-body mt-1">Cross-platform Mobile App</p>
+                </div>
+                <div class="card p-6 text-center" data-aos="zoom-in" data-aos-delay="350">
+                    <i class="fas fa-plug text-4xl text-gray-800 mb-3"></i>
+                    <h4 class="font-bold text-dark">Socket.io</h4>
+                    <p class="text-xs text-body mt-1">Real-time chat & tracking</p>
+                </div>
+                <div class="card p-6 text-center" data-aos="zoom-in" data-aos-delay="400">
+                    <i class="fas fa-brain text-4xl text-orange-500 mb-3"></i>
+                    <h4 class="font-bold text-dark">TensorFlow</h4>
+                    <p class="text-xs text-body mt-1">AI Machine Learning Models</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 9: AI Integration -->
+    <section class="py-20 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-dark mb-12 text-center" data-aos="fade-up">Proprietary AI Integration
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- AI Use Cases -->
+                <div class="card p-6 border-l-4 border-l-primary" data-aos="fade-up">
+                    <span class="text-xs font-bold bg-primary/10 text-primary px-2 py-1 rounded inline-block mb-3">AI
+                        CORE</span>
+                    <h4 class="font-bold text-dark text-lg mb-2">Price Prediction</h4>
+                    <p class="text-sm text-body"><strong>How it works:</strong> Analyzes historical commodity data to
+                        predict future prices of cement/steel.</p>
+                </div>
+                <div class="card p-6 border-l-4 border-l-primary" data-aos="fade-up" data-aos-delay="100">
+                    <span class="text-xs font-bold bg-primary/10 text-primary px-2 py-1 rounded inline-block mb-3">AI
+                        CORE</span>
+                    <h4 class="font-bold text-dark text-lg mb-2">Delay Prediction</h4>
+                    <p class="text-sm text-body"><strong>How it works:</strong> Uses weather, labor shortage data, and
+                        past project velocity to warn about missed deadlines.</p>
+                </div>
+                <div class="card p-6 border-l-4 border-l-primary" data-aos="fade-up" data-aos-delay="200">
+                    <span class="text-xs font-bold bg-primary/10 text-primary px-2 py-1 rounded inline-block mb-3">AI
+                        CORE</span>
+                    <h4 class="font-bold text-dark text-lg mb-2">Smart Recs</h4>
+                    <p class="text-sm text-body"><strong>How it works:</strong> Matches the highest-rated contractors
+                        automatically based on the specific project requirements.</p>
+                </div>
+                <div class="card p-6 border-l-4 border-l-primary" data-aos="fade-up" data-aos-delay="300">
+                    <span class="text-xs font-bold bg-primary/10 text-primary px-2 py-1 rounded inline-block mb-3">AI
+                        CORE</span>
+                    <h4 class="font-bold text-dark text-lg mb-2">Photo Progress</h4>
+                    <p class="text-sm text-body"><strong>How it works:</strong> Computer vision checks daily site photos
+                        against the 3D model to calculate real completion %.</p>
+                </div>
+                <div class="card p-6 border-l-4 border-l-primary" data-aos="fade-up" data-aos-delay="400">
+                    <span class="text-xs font-bold bg-primary/10 text-primary px-2 py-1 rounded inline-block mb-3">AI
+                        CORE</span>
+                    <h4 class="font-bold text-dark text-lg mb-2">Hindi Voice NLP</h4>
+                    <p class="text-sm text-body"><strong>How it works:</strong> Natural language processing designed for
+                        Indian construction vernacular to log actions via voice.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: Roadmap -->
+    <section id="roadmap" class="py-20 bg-gray-50 border-y border-gray-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-dark mb-16 text-center" data-aos="fade-up">12-Month Rollout Roadmap</h2>
+
+            <div class="relative wrap overflow-hidden p-4 h-full">
+                <div
+                    class="border-2-2 absolute border-opacity-20 border-gray-400 h-full border left-1/2 hidden md:block">
+                </div>
+
+                <!-- Phase 1 -->
+                <div class="mb-8 flex justify-between items-center w-full flex-col md:flex-row" data-aos="fade-up">
+                    <div class="order-1 w-full md:w-5/12"></div>
+                    <div
+                        class="z-20 flex items-center order-1 bg-primary shadow-xl w-10 h-10 rounded-full mb-4 md:mb-0">
+                        <h1 class="mx-auto font-bold text-lg text-white">1</h1>
+                    </div>
+                    <div class="order-1 card w-full md:w-5/12 px-6 py-5">
+                        <h3 class="font-bold text-dark text-lg mb-1">Phase 1: Tender MVP</h3>
+                        <p class="text-sm font-semibold text-primary mb-3">Months 1-3</p>
+                        <ul class="text-sm text-body space-y-1">
+                            <li><i class="fas fa-check text-green-500 mr-1"></i> Core User Auth Setup</li>
+                            <li><i class="fas fa-check text-green-500 mr-1"></i> Project Posting & Bidding Engine</li>
+                            <li><i class="fas fa-check text-green-500 mr-1"></i> Digital Contracts Module</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Phase 2 -->
+                <div class="mb-8 flex justify-between items-center w-full flex-col md:flex-row-reverse"
+                    data-aos="fade-up">
+                    <div class="order-1 w-full md:w-5/12"></div>
+                    <div
+                        class="z-20 flex items-center order-1 bg-primary shadow-xl w-10 h-10 rounded-full mb-4 md:mb-0">
+                        <h1 class="mx-auto font-bold text-lg text-white">2</h1>
+                    </div>
+                    <div class="order-1 card w-full md:w-5/12 px-6 py-5">
+                        <h3 class="font-bold text-dark text-lg mb-1">Phase 2: Procurement</h3>
+                        <p class="text-sm font-semibold text-primary mb-3">Months 3-6</p>
+                        <ul class="text-sm text-body space-y-1">
+                            <li><i class="fas fa-check text-green-500 mr-1"></i> Supplier onboarding & inventory</li>
+                            <li><i class="fas fa-check text-green-500 mr-1"></i> E-commerce ordering system</li>
+                            <li><i class="fas fa-check text-green-500 mr-1"></i> Payment gateway integration</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Phase 3 -->
+                <div class="mb-8 flex justify-between items-center w-full flex-col md:flex-row" data-aos="fade-up">
+                    <div class="order-1 w-full md:w-5/12"></div>
+                    <div
+                        class="z-20 flex items-center order-1 bg-primary shadow-xl w-10 h-10 rounded-full mb-4 md:mb-0">
+                        <h1 class="mx-auto font-bold text-lg text-white">3</h1>
+                    </div>
+                    <div class="order-1 card w-full md:w-5/12 px-6 py-5">
+                        <h3 class="font-bold text-dark text-lg mb-1">Phase 3: Service & Tracking</h3>
+                        <p class="text-sm font-semibold text-primary mb-3">Months 6-9</p>
+                        <ul class="text-sm text-body space-y-1">
+                            <li><i class="fas fa-check text-green-500 mr-1"></i> Architect/Machine directory</li>
+                            <li><i class="fas fa-check text-green-500 mr-1"></i> Gantt charts and Daily logs</li>
+                            <li><i class="fas fa-check text-green-500 mr-1"></i> Automated Milestone triggers</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Phase 4 -->
+                <div class="mb-8 flex justify-between items-center w-full flex-col md:flex-row-reverse"
+                    data-aos="fade-up">
+                    <div class="order-1 w-full md:w-5/12"></div>
+                    <div
+                        class="z-20 flex items-center order-1 bg-primary shadow-xl w-10 h-10 rounded-full mb-4 md:mb-0">
+                        <h1 class="mx-auto font-bold text-lg text-white">4</h1>
+                    </div>
+                    <div class="order-1 card w-full md:w-5/12 px-6 py-5">
+                        <h3 class="font-bold text-dark text-lg mb-1">Phase 4: AI & Scale</h3>
+                        <p class="text-sm font-semibold text-primary mb-3">Months 9-12</p>
+                        <ul class="text-sm text-body space-y-1">
+                            <li><i class="fas fa-check text-green-500 mr-1"></i> TensorFlow prediction models</li>
+                            <li><i class="fas fa-check text-green-500 mr-1"></i> Voice command module</li>
+                            <li><i class="fas fa-check text-green-500 mr-1"></i> Escrow financial rollout</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 10 & 11: Monetization + Success Metrics -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Monetization -->
+                <div data-aos="fade-right">
+                    <h2 class="text-3xl font-bold text-dark mb-8">Business Model</h2>
+                    <div class="space-y-4">
+                        <div class="card p-4 flex justify-between items-center bg-white">
+                            <div>
+                                <div class="font-bold text-dark">Commission</div>
+                                <div class="text-xs text-body">On total project value</div>
+                            </div>
+                            <div class="font-bold text-primary text-xl">1 - 3%</div>
+                        </div>
+                        <div class="card p-4 flex justify-between items-center bg-white">
+                            <div>
+                                <div class="font-bold text-dark">SaaS Subscription</div>
+                                <div class="text-xs text-body">For Contractors/Builders</div>
+                            </div>
+                            <div class="font-bold text-primary text-xl">₹999-4.9k<span
+                                    class="text-sm text-gray-400 font-normal">/mo</span></div>
+                        </div>
+                        <div class="card p-4 flex justify-between items-center bg-white">
+                            <div>
+                                <div class="font-bold text-dark">Featured Listing</div>
+                                <div class="text-xs text-body">Suppliers bumping ad rank</div>
+                            </div>
+                            <div class="font-bold text-primary text-xl">₹500-1k<span
+                                    class="text-sm text-gray-400 font-normal">/mo</span></div>
+                        </div>
+                        <div class="card p-4 flex justify-between items-center bg-white">
+                            <div>
+                                <div class="font-bold text-dark">Lead Fee</div>
+                                <div class="text-xs text-body">Pay per qualified lead</div>
+                            </div>
+                            <div class="font-bold text-primary text-xl">₹50-100<span
+                                    class="text-sm text-gray-400 font-normal">/lead</span></div>
+                        </div>
+                        <div class="card p-4 flex justify-between items-center bg-white">
+                            <div>
+                                <div class="font-bold text-dark">Escrow Fee</div>
+                                <div class="text-xs text-body">Secured transaction fee</div>
+                            </div>
+                            <div class="font-bold text-primary text-xl">0.5%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Success Metrics -->
+                <div data-aos="fade-left">
+                    <h2 class="text-3xl font-bold text-dark mb-8">Success Targets</h2>
+                    <div class="card overflow-hidden mb-6">
+                        <div class="bg-gray-50 px-5 py-3 border-b text-sm font-bold text-dark">Month 1-3 Targets (Beta)
+                        </div>
+                        <table class="w-full text-sm">
+                            <tr class="border-b">
+                                <td class="p-3 font-medium">Builders Onboarded</td>
+                                <td class="p-3 text-right font-bold">50</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="p-3 font-medium">Contractors Onboarded</td>
+                                <td class="p-3 text-right font-bold">100</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="p-3 font-medium">Active Projects</td>
+                                <td class="p-3 text-right font-bold">20</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="p-3 font-medium">Total Bids Made</td>
+                                <td class="p-3 text-right font-bold">100</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-medium text-primary">Successful Matches</td>
+                                <td class="p-3 text-right font-bold text-primary">10</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="card overflow-hidden border-primary/30 shadow-md">
+                        <div class="bg-primary/5 px-5 py-3 border-b border-primary/20 text-sm font-bold text-primary">
+                            Month 6-9 Targets (Scale)</div>
+                        <table class="w-full text-sm">
+                            <tr class="border-b">
+                                <td class="p-3 font-medium">Active Users</td>
+                                <td class="p-3 text-right font-bold">500+</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="p-3 font-medium">Active Projects</td>
+                                <td class="p-3 text-right font-bold">200+</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="p-3 font-medium">Material Order Value</td>
+                                <td class="p-3 text-right font-bold text-green-600">₹1 Cr+</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-medium">Service Bookings</td>
+                                <td class="p-3 text-right font-bold">100+</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 12: Download -->
+    <section id="download" class="py-24 bg-dark text-center">
+        <div class="max-w-3xl mx-auto px-6" data-aos="zoom-in">
+            <div class="flex justify-center gap-4 mb-6">
+                <i class="fas fa-file-word text-6xl text-primary"></i>
+                <i class="fas fa-file-word text-6xl text-blue-500"></i>
+            </div>
+            <h2 class="text-4xl font-bold text-white mb-4">The Complete PRD Documents</h2>
+            <p class="text-lg text-gray-400 mb-8">Access the comprehensive 50-page technical specification, database
+                schemas, API structures, and financial models.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="BuildEase_PRD_Deep_Tiwari%20(1).docx" download
+                    class="inline-block bg-primary hover:bg-primaryHover text-white px-8 py-4 rounded-xl font-bold text-lg transition shadow-lg shadow-primary/30">
+                    <i class="fas fa-file-word mr-2"></i> BuildEase PRD
+                </a>
+                <a href="Construction_Tech_Platform%20(1).docx" download
+                    class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition shadow-lg shadow-blue-600/30">
+                    <i class="fas fa-file-word mr-2"></i> Construction Tech Platform
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark border-t border-gray-800 py-8">
+        <div class="max-w-7xl mx-auto px-6 text-center text-sm text-gray-500 font-medium">
+            &copy; 2026 BuildEase Internal Research Team. All rights reserved. Strictly Confidential.
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true, offset: 100 });
+
+        function showFeature(id) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuildEase | Solving Construction</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: { brand: { 500: '#f97316', 600: '#ea580c' }, dark: '#0f172a' }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .bg-hero {
+            background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.6)), url('https://images.unsplash.com/photo-1541888086425-d81bb19240f5?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .image-card {
+            background-size: cover;
+            background-position: center;
+            min-height: 400px;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50 py-4 transition-all">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div class="text-2xl font-bold text-dark tracking-tight">
+                <span class="text-brand-500">Build</span>Ease
+            </div>
+            <div class="hidden md:flex gap-8 font-medium text-gray-600 items-center">
+                <a href="deep.html"
+                    class="bg-brand-50 text-brand-600 px-4 py-1.5 rounded-full text-sm font-bold shadow-sm hover:bg-brand-500 hover:text-white transition-all transform hover:scale-105 border border-brand-200">Deep
+                    PRD</a>
+                <a href="#how-we-solve" class="hover:text-brand-500 transition">How We Solve</a>
+                <a href="#competitors" class="hover:text-brand-500 transition">The Market</a>
+                <a href="#interactive-demo" class="hover:text-brand-500 transition">Live Demo</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-hero min-h-screen flex items-center justify-center text-center px-4 pt-20">
+        <div class="max-w-4xl text-white">
+            <span
+                class="inline-block py-1 px-3 rounded-full bg-brand-500/20 text-brand-500 font-semibold text-sm mb-6 border border-brand-500/30">
+                Construction Technology Research
+            </span>
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight tracking-tight">
+                Building is Hard. <br><span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-brand-500">Managing it
+                    shouldn't be.</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-10 max-w-2xl mx-auto font-light">
+                We visited 25+ construction sites and analyzed 6 major apps. We found huge gaps in how builders manage
+                labor, materials, and money. Here is our solution.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#how-we-solve"
+                    class="bg-brand-500 hover:bg-brand-600 text-white font-semibold py-4 px-8 rounded-lg shadow-lg shadow-brand-500/30 transition-all text-lg">
+                    See The Solutions
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Ad-Style Storytelling: Problem vs Fix -->
+    <section id="how-we-solve" class="py-24 max-w-7xl mx-auto px-6">
+        <div class="text-center mb-20">
+            <h2 class="text-4xl font-extrabold text-dark mb-4">Real Builder Problems. Real Solutions.</h2>
+            <p class="text-xl text-gray-500 max-w-2xl mx-auto">We don't build complex software. We build simple tools
+                for the ground reality of construction sites.</p>
+        </div>
+
+        <!-- Problem 1: Labor -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-24">
+            <div class="image-card order-2 lg:order-1"
+                style="background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80');">
+            </div>
+            <div class="order-1 lg:order-2">
+                <div class="bg-red-50 text-red-700 py-1 px-3 rounded-md text-sm font-bold inline-block mb-4">The Problem
+                </div>
+                <h3 class="text-3xl font-bold mb-4 text-dark">Messy Worker Management</h3>
+                <p class="text-gray-600 mb-6 text-lg">Builders lose track of who comes to work. Skills are never
+                    verified. At the end of the week, everyone argues about payments and attendance.</p>
+
+                <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm relative overflow-hidden mt-8">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-green-500"></div>
+                    <div class="bg-green-50 text-green-700 py-1 px-3 rounded-md text-sm font-bold inline-block mb-3">Our
+                        Fix: BuildEase</div>
+                    <h4 class="text-xl font-bold mb-2">Smart Attendance & Matching</h4>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i> Workers use a
+                            simple app to log in. GPS checks their location.</li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i> Need a
+                            plumber? The app finds verified workers near your site automatically.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Problem 2: Materials -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-24">
+            <div>
+                <div class="bg-red-50 text-red-700 py-1 px-3 rounded-md text-sm font-bold inline-block mb-4">The Problem
+                </div>
+                <h3 class="text-3xl font-bold mb-4 text-dark">Material Chaos & Theft</h3>
+                <p class="text-gray-600 mb-6 text-lg">Work stops completely because someone forgot to order cement. Up
+                    to 15% of materials get wasted or stolen from the site with no tracking.</p>
+
+                <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm relative overflow-hidden mt-8">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-green-500"></div>
+                    <div class="bg-green-50 text-green-700 py-1 px-3 rounded-md text-sm font-bold inline-block mb-3">Our
+                        Fix: BuildEase</div>
+                    <h4 class="text-xl font-bold mb-2">Live Tracking & Supplier Market</h4>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i> App warns you
+                            when stocks are low before they run out.</li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i> Compare
+                            prices from local suppliers inside the app and order instantly.</li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i> Photo scans
+                            verify delivery vs actual order to prevent theft.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="image-card"
+                style="background-image: url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=80');">
+            </div>
+        </div>
+
+        <!-- Problem 3: Complex Apps & Cash -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="image-card order-2 lg:order-1"
+                style="background-image: url('https://images.unsplash.com/photo-1621644729124-7ebfc4f177fc?auto=format&fit=crop&w=800&q=80');">
+            </div>
+            <div class="order-1 lg:order-2">
+                <div class="bg-red-50 text-red-700 py-1 px-3 rounded-md text-sm font-bold inline-block mb-4">The Problem
+                </div>
+                <h3 class="text-3xl font-bold mb-4 text-dark">Apps Are Too Hard To Use</h3>
+                <p class="text-gray-600 mb-6 text-lg">Existing software requires good internet, high education, and only
+                    tracks digital money. Construction happens offline and involves a lot of cash.</p>
+
+                <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm relative overflow-hidden mt-8">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-green-500"></div>
+                    <div class="bg-green-50 text-green-700 py-1 px-3 rounded-md text-sm font-bold inline-block mb-3">Our
+                        Fix: BuildEase</div>
+                    <h4 class="text-xl font-bold mb-2">Offline First & Voice Ready</h4>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i> <strong>Voice
+                                Commands:</strong> Just talk to the app. No typing needed.</li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i> <strong>Works
+                                Offline:</strong> Logs data without internet and saves it safely.</li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i> <strong>Cash
+                                Ledger:</strong> Dual tracking for both digital payments and cash hand-outs.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Competitors Matrix -->
+    <section id="competitors" class="py-24 bg-white border-y border-gray-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-extrabold text-dark mb-4">Why Others Fail</h2>
+                <p class="text-xl text-gray-500 max-w-2xl mx-auto">A quick look at why current tools on the market don't
+                    work for everyday builders.</p>
+            </div>
+
+            <div class="overflow-x-auto bg-white rounded-xl shadow-sm border border-gray-200">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-gray-50 text-gray-600 text-sm uppercase tracking-wider border-b border-gray-200">
+                            <th class="p-5 font-semibold">Features Needed</th>
+                            <th class="p-5 font-semibold text-center border-l border-gray-200 bg-gray-100">Procore</th>
+                            <th class="p-5 font-semibold text-center border-l border-gray-200 bg-gray-100">Evercam</th>
+                            <th class="p-5 font-semibold text-center border-l border-gray-200 bg-gray-100">Sitesathi
+                            </th>
+                            <th
+                                class="p-5 font-semibold text-center border-l border-brand-500 bg-brand-500 text-white shadow-lg">
+                                BuildEase</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-700">
+                        <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <td class="p-5 font-medium">Simple Voice Controls</td>
+                            <td class="p-5 text-center border-l border-gray-200 text-red-500"><i
+                                    class="fas fa-times"></i></td>
+                            <td class="p-5 text-center border-l border-gray-200 text-red-500"><i
+                                    class="fas fa-times"></i></td>
+                            <td class="p-5 text-center border-l border-gray-200 text-red-500"><i
+                                    class="fas fa-times"></i></td>
+                            <td class="p-5 text-center border-l border-gray-200 text-green-500 font-bold bg-orange-50">
+                                <i class="fas fa-check"></i>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <td class="p-5 font-medium">Works Offline</td>
+                            <td class="p-5 text-center border-l border-gray-200 text-red-500"><i
+                                    class="fas fa-times"></i></td>
+                            <td class="p-5 text-center border-l border-gray-200 text-red-500"><i
+                                    class="fas fa-times"></i></td>
+                            <td class="p-5 text-center border-l border-gray-200 text-red-500"><i
+                                    class="fas fa-times"></i></td>
+                            <td class="p-5 text-center border-l border-gray-200 text-green-500 font-bold bg-orange-50">
+                                <i class="fas fa-check"></i>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <td class="p-5 font-medium">Cash Payment Tracking</td>
+                            <td class="p-5 text-center border-l border-gray-200 text-red-500"><i
+                                    class="fas fa-times"></i></td>
+                            <td class="p-5 text-center border-l border-gray-200 text-red-500"><i
+                                    class="fas fa-times"></i></td>
+                            <td class="p-5 text-center border-l border-gray-200 text-red-500"><i
+                                    class="fas fa-times"></i></td>
+                            <td class="p-5 text-center border-l border-gray-200 text-green-500 font-bold bg-orange-50">
+                                <i class="fas fa-check"></i>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <td class="p-5 font-medium">Material Anti-Theft</td>
+                            <td class="p-5 text-center border-l border-gray-200 text-red-500"><i
+                                    class="fas fa-times"></i></td>
+                            <td class="p-5 text-center border-l border-gray-200 text-red-500"><i
+                                    class="fas fa-times"></i></td>
+                            <td class="p-5 text-center border-l border-gray-200 text-red-500"><i
+                                    class="fas fa-times"></i></td>
+                            <td class="p-5 text-center border-l border-gray-200 text-green-500 font-bold bg-orange-50">
+                                <i class="fas fa-check"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="p-5 font-medium text-gray-500">Target Cost</td>
+                            <td class="p-5 text-center border-l border-gray-200 text-gray-500 text-sm bg-gray-50">High
+                                Cost</td>
+                            <td class="p-5 text-center border-l border-gray-200 text-gray-500 text-sm bg-gray-50">Medium
+                            </td>
+                            <td class="p-5 text-center border-l border-gray-200 text-gray-500 text-sm bg-gray-50">Low
+                            </td>
+                            <td class="p-5 text-center border-l border-gray-200 font-bold text-brand-600 bg-orange-100">
+                                Affordable</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Demo -->
+    <section id="interactive-demo" class="py-24 bg-dark text-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-4xl font-extrabold mb-4 text-center">Try The Simple Interface</h2>
+            <p class="text-lg text-gray-400 mb-12 text-center">Click the buttons below to see how easy it is for an
+                on-site manager to use.</p>
+
+            <div class="bg-gray-800 rounded-xl p-2 md:p-4 border border-gray-700 shadow-2xl">
+
+                <!-- Demo Tabs -->
+                <div class="flex gap-2 border-b border-gray-700 p-2 mb-6 overflow-x-auto">
+                    <button class="demo-btn active px-6 py-3 rounded-lg font-semibold bg-brand-500 text-white"
+                        onclick="switchDemo('attendance', this)">Log Worker</button>
+                    <button class="demo-btn px-6 py-3 rounded-lg font-semibold text-gray-400 hover:text-white"
+                        onclick="switchDemo('voice', this)">Voice Command</button>
+                    <button class="demo-btn px-6 py-3 rounded-lg font-semibold text-gray-400 hover:text-white"
+                        onclick="switchDemo('materials', this)">Compare Material</button>
+                </div>
+
+                <div class="p-4 md:p-8 bg-white/5 rounded-xl min-h-[350px]">
+
+                    <!-- Attendance Demo -->
+                    <div id="demo-attendance" class="demo-content">
+                        <h4 class="text-2xl font-bold mb-6 text-white"><i class="fas fa-users text-brand-500 mr-2"></i>
+                            Quick Check-In</h4>
+                        <div class="space-y-4">
+                            <div
+                                class="bg-gray-900 border border-gray-700 p-5 rounded-lg flex justify-between items-center transition hover:border-gray-500">
+                                <div>
+                                    <div class="font-bold text-lg text-white">Alex The Builder</div>
+                                    <div class="text-sm text-gray-400">Masonry</div>
+                                </div>
+                                <button class="bg-white text-dark font-bold px-6 py-2 rounded shadow hover:bg-gray-200"
+                                    onclick="logWorker(this, 'Alex')">Present</button>
+                            </div>
+                            <div
+                                class="bg-gray-900 border border-gray-700 p-5 rounded-lg flex justify-between items-center transition hover:border-gray-500">
+                                <div>
+                                    <div class="font-bold text-lg text-white">David Smith</div>
+                                    <div class="text-sm text-gray-400">Steel Works</div>
+                                </div>
+                                <button class="bg-white text-dark font-bold px-6 py-2 rounded shadow hover:bg-gray-200"
+                                    onclick="logWorker(this, 'David')">Present</button>
+                            </div>
+                        </div>
+                        <div id="log-result"
+                            class="mt-6 p-4 rounded-lg bg-green-500/20 border border-green-500/50 text-green-400 hidden">
+                        </div>
+                    </div>
+
+                    <!-- Voice Demo -->
+                    <div id="demo-voice" class="demo-content hidden text-center">
+                        <h4 class="text-2xl font-bold mb-8 text-white"><i
+                                class="fas fa-microphone text-brand-500 mr-2"></i> Talk. Don't Type.</h4>
+                        <button
+                            class="w-24 h-24 bg-red-500 rounded-full shadow-lg shadow-red-500/30 text-white text-3xl hover:bg-red-600 hover:scale-105 transition-all text-center mb-6"
+                            onclick="testVoice()">
+                            <i class="fas fa-microphone"></i>
+                        </button>
+                        <p class="text-gray-400 font-semibold mb-8 uppercase tracking-widest text-sm">Tap to record</p>
+                        <div id="voice-screen"
+                            class="hidden text-left bg-gray-900 border border-gray-700 p-6 rounded-lg">
+                            <p class="text-sm text-gray-500 mb-2">We heard:</p>
+                            <p class="text-xl text-white font-medium mb-4">"Send 10 bags of cement and 2 steel rods
+                                right now."</p>
+                            <p class="text-brand-400 font-bold border-t border-gray-700 pt-4"><i
+                                    class="fas fa-magic mr-2"></i> Auto-Ordering...</p>
+                        </div>
+                    </div>
+
+                    <!-- Material Demo -->
+                    <div id="demo-materials" class="demo-content hidden">
+                        <h4 class="text-2xl font-bold mb-6 text-white"><i class="fas fa-truck text-brand-500 mr-2"></i>
+                            Local Pricing</h4>
+                        <select
+                            class="w-full bg-gray-900 border border-gray-700 text-white p-4 rounded-lg mb-6 outline-none"
+                            onchange="loadPrices(this.value)">
+                            <option value="">Select Material Needed...</option>
+                            <option value="cement">Cement (50lb Bags)</option>
+                        </select>
+
+                        <div id="price-list" class="space-y-4 hidden">
+                            <div
+                                class="bg-gray-900 border border-brand-500 p-5 rounded-lg flex justify-between relative overflow-hidden flex-col md:flex-row gap-4">
+                                <div class="absolute top-0 right-0 bg-brand-500 text-xs px-3 py-1 font-bold">Best Price
+                                </div>
+                                <div>
+                                    <div class="font-bold text-lg text-white">City Construction Supply</div>
+                                    <div class="text-sm text-gray-400">Rating: 4.8 | Delivers Today</div>
+                                </div>
+                                <div class="md:text-right flex justify-between items-center md:block">
+                                    <div class="text-2xl font-bold text-white mb-2">$380</div><button
+                                        class="bg-brand-500 px-4 py-2 rounded text-sm font-bold">Order Now</button>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-gray-900 border border-gray-700 p-5 rounded-lg flex justify-between flex-col md:flex-row gap-4 opacity-75">
+                                <div>
+                                    <div class="font-bold text-lg text-white">Express Hardware</div>
+                                    <div class="text-sm text-gray-400">Rating: 4.0 | Delivers Tomorrow</div>
+                                </div>
+                                <div class="md:text-right flex justify-between items-center md:block">
+                                    <div class="text-2xl font-bold text-white mb-2">$410</div><button
+                                        class="border border-white text-white px-4 py-2 rounded text-sm font-bold">Order
+                                        Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white py-10 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h3 class="text-2xl font-bold text-dark mb-4">Read Complete Research</h3>
+            <a href="PROBLEMS%20WITH%20THEIR%20SOLUTIONS.pdf" download
+                class="inline-block border-2 border-dark text-dark font-bold hover:bg-dark hover:text-white transition py-3 px-8 rounded-lg outline-none mb-8">
+                Download PDF Report
+            </a>
+            <p class="text-sm text-gray-500">� 2026 BuildEase Tech Research. Internal use only.</p>
+        </div>
+    </footer>
+
+    <script>
+        function switchDemo(tab, element) {
+            document.querySelectorAll('.demo-content').forEach(e => e.classList.add('hidden'));
+            document.getElementById('demo-' + tab).classList.remove('hidden');
+
+            document.querySelectorAll('.demo-btn').forEach(btn => {
+                btn.className = "demo-btn px-6 py-3 rounded-lg font-semibold text-gray-400 hover:text-white transition";
+            });
+            element.className = "demo-btn active px-6 py-3 rounded-lg font-semibold bg-brand-500 text-white transition";
+        }
+
+        function logWorker(btn, name) {
+            btn.innerText = "Done";
+            btn.classList.remove('bg-white', 'text-dark');
+            btn.classList.add('bg-green-500', 'text-white');
+            btn.disabled = true;
+
+            const logBox = document.getElementById('log-result');
+            logBox.classList.remove('hidden');
+            logBox.innerHTML = `<strong><i class="fas fa-check-circle mr-2"></i> ${name} Logged!</strong> <br><span class="text-sm mt-1 block tracking-wider">GPS verified. Time: ${new Date().toLocaleTimeString()}</span>`;
+        }
+
+        function testVoice() {
+            const screen = document.getElementById('voice-screen');
+            screen.classList.remove('hidden');
+            screen.style.opacity = 0;
+            setTimeout(() => {
+                screen.style.transition = "opacity 0.4s";
+                screen.style.opacity = 1;
+            }, 50);
+        }
+
+        function loadPrices(val) {
+            if (val !== "") {
+                document.getElementById('price-list').classList.remove('hidden');
+            } else {
+                document.getElementById('price-list').classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+
+</html>
